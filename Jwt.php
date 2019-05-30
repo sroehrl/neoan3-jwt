@@ -59,7 +59,7 @@ class JWT  {
      *
      * @throws Exception
      */
-    static function payLoad($assoc){
+    static function payload($assoc){
         if(!self::$_token){
             self::generateToken();
         }
