@@ -50,6 +50,8 @@ class JWT  {
             return ['error'=>'invalid'];
         } catch (ExpiredException $e){
             return ['error'=>'expired'];
+        }catch(\UnexpectedValueException $e){
+            return ['error'=>'Authentication misformed'];
         }
         return ['error'=>'encoding'];
     }
