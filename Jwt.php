@@ -7,7 +7,7 @@ use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT as FbJWT;
 use Firebase\JWT\SignatureInvalidException;
 
-class JWT  {
+class Jwt  {
     /**
      * @var null
      */
