@@ -2,7 +2,7 @@
     "name": "neoan3-apps/jwt",
     "description": "neoan3 wrapper for JSON WEB TOKEN using Firebase",
     "require": {
-        "firebase/php-jwt": "^5.0"
+        "firebase/php-jwt": "^6.10"
     },
     "license": "MIT",
     "authors": [
