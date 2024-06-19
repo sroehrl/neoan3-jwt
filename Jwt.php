@@ -5,6 +5,7 @@ namespace Neoan3\Apps;
 
 use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT as FbJWT;
+use Firebase\JWT\Key;
 use Firebase\JWT\SignatureInvalidException;
 
 class Jwt  {
@@ -42,7 +43,7 @@ class Jwt  {
      */
     static function decode($jwt,$key){
         try{
-            $decoded = FbJWT::decode($jwt,$key,[self::$_algorithm]);
+            $decoded = FbJWT::decode($jwt, new Key($key,self::$_algorithm));
             if($decoded){
                 return ['error'=>false,'decoded'=>(array) $decoded];
             }
